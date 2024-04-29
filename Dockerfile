@@ -22,6 +22,7 @@ RUN ldconfig
 # optional
 # RUN rm -rf /work
 WORKDIR /openscad
+RUN cp /work/openscad/libraries/python/pylibfive.py  /usr/local/lib/python3.10/dist-packages
 
 ENTRYPOINT /usr/local/bin/openscad "$@"
 
