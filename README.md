@@ -11,7 +11,12 @@ docker build . -t zef/pythonscad
 Run with
 ```
 # xhost + 
-docker run --init  --rm -it -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY   -v <your shared dir>:/openscad  -v <your home dir>/.config/OpenSCAD:/root/.config/OpenSCAD zef/pythonscad -- --enable all --trust-python
+docker run --init --rm -it -u $(id -u):$(id -g) -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY  -e HOME=<your home dir> -v <your home dir>:<your home dir> zef/pythonscad -- --enable all --trust-python
+all --trust-python
+```
+ex if your home dir is /home/fabrizio:
+```
+docker run --init  --rm -it -u $(id -u):$(id -g) -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY  -e HOME=/home/fabrizio -v /home/fabrizio:/home/fabrizio zef/pythonscad -- --enable all --trust-python
 ```
 
 
