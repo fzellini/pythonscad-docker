@@ -19,9 +19,9 @@ ex if your home dir is /home/fabrizio:
 docker run --init  --rm -it -u $(id -u):$(id -g) -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY  -e HOME=/home/fabrizio -v /home/fabrizio:/home/fabrizio zef/pythonscad -- --enable all --trust-python
 ```
 
-
-
 Tested in a Linux box with ubuntu 22 and docker installed.
+
+![python enabled](https://github.com/fzellini/pythonscad-docker/blob/main/openscad.png?raw=true)
 
 Many thanks to [gsohler](https://github.com/gsohler) for his excellent work to porting python on [openscad](https://openscad.org/)
 
