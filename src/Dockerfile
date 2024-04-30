@@ -4,8 +4,7 @@ RUN apt update \
     && apt install -y --no-install-recommends \
     tar gzip git \
     x11-apps mesa-utils \
-    apt-transport-https ca-certificates \
-    nettle-dev libjpeg-dev
+    apt-transport-https ca-certificates 
 
 WORKDIR /work
 RUN git clone https://github.com/gsohler/openscad.git
