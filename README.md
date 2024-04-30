@@ -4,7 +4,7 @@ Compile and run last version of [pythonscad](https://pythonscad.org/) in a docke
 build image with
 ```
 git clone https://github.com/fzellini/pythonscad-docker
-cd pythonscad-docker
+cd pythonscad-docker/src
 docker build . -t zef/pythonscad
 ```
 
